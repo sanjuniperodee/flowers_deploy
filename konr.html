@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+    <link rel="stylesheet" href="konr.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact img {
+            border-radius: 50%;
+            max-width: 100px;
+            max-height: 100px;
+            margin-right: 20px;
+        }
+
+        .contact-info {
+            flex-grow: 1;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style> 
+</head>
+
+<body>
+    <header>
+        <h1>Флористика</h1>
+    </header>
+
+    <section>
+        <h2>Контакты</h2>
+
+        <div class="contact">
+            <img src="фото1.jpg" alt="Фото Флориста 1">
+            <div class="contact-info">
+                <h3>Имя Флориста 1</h3>
+                <p>Email: florist1@example.com</p>
+                <p>Телефон: +7 (123) 456-7890</p>
+            </div>
+        </div>
+
+        <div class="contact">
+            <img src="фото2.jpg" alt="Фото Флориста 2">
+            <div class="contact-info">
+                <h3>Имя Флориста 2</h3>
+                <p>Email: florist2@example.com</p>
+                <p>Телефон: +7 (987) 654-3210</p>
+            </div>
+        </div>
+
+        
+
+    </section>
+
+    <footer>
+        &copy; 2023 Флористика
+    </footer>
+
+     
+     <button class="back-button" onclick="goBack()">Назад</button>
+
+     <script>
+      
+         function goBack() {
+             window.history.back();
+         }
+     </script>
+</body>
+
+</html>

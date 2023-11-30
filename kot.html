@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог | Флористика Онлайн</title>
+    <link rel="stylesheet" href="kot.css">
+</head>
+
+<body>
+
+<header>
+    <h2>Наш каталог букетов</h2>
+    <button id="backButton" class="top-right" onclick="goBack()">Назад</button>
+</header>
+
+<section id="main-content">
+
+    <div class="bouquet" data-name="Розовый романтический букет" data-price="25.00">
+        <img src="bouquet1.jpg" alt="Букет 1">
+        <h3>Розовый романтический букет</h3>
+        <p>Цена: $25.00</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <div class="bouquet" data-name="Свежий летний сад" data-price="30.00">
+        <img src="bouquet2.jpg" alt="Букет 2">
+        <h3>Свежий летний сад</h3>
+        <p>Цена: $30.00</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <div class="bouquet" data-name="Белоснежный свадебный букет" data-price="50.00">
+        <img src="bouquet3.jpg" alt="Букет 3">
+        <h3>Белоснежный свадебный букет</h3>
+        <p>Цена: $50.00</p>
+        <button class="add-to-cart">Добавить в корзину</button>
+    </div>
+
+    <!-- Добавьте больше букетов, если необходимо -->
+
+</section>
+
+<footer>
+    <p>&copy; 2023 Флористика Онлайн. Все права защищены.</p>
+</footer>
+
+<script src="catalog.js"></script>
+</body>
+
+</html>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Филиалы | Флористика Онлайн</title>
+    <link rel="stylesheet" href="fil.css">
+</head>
+<body>
+
+<header>
+    <h1>Филиалы Флористики Онлайн</h1>
+    <p>Найдите ближайший к вам филиал и наслаждайтесь красотой наших цветов!</p>
+</header>
+
+<section id="main-content">
+    <div class="branch" data-lat="43.2551" data-lng="76.9126">
+        <h2>Филиал в Алматы</h2>
+        <p>Адрес: ул. Примерная, д. 123, Алматы, Казахстан</p>
+    </div>
+
+    <div class="branch" data-lat="43.2389" data-lng="76.8894">
+        <h2>Филиал в Алматы</h2>
+        <p>Адрес: ул. Примерная, д. 456, Алматы, Казахстан</p>
+    </div>
+
+    <div class="branch" data-lat="43.2220" data-lng="76.8512">
+        <h2>Филиал в Алматы</h2>
+        <p>Адрес: ул. Примерная, д. 789, Алматы, Казахстан</p>
+    </div>
+
+   
+
+    <div id="map-container">
+        <div id="map"></div>
+    </div>
+    
+    
+    <button id="backButton">Назад</button>
+</section>
+
+<footer>
+    <p>&copy; 2023 Флористика Онлайн. Все права защищены.</p>
+</footer>
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 43.2551, lng: 76.9126 },
+            zoom: 12
+        });
+
+        var branches = [
+            { lat: 43.2551, lng: 76.9126, name: 'Филиал в Алматы', address: 'ул. Примерная, д. 123, Алматы, Казахстан' },
+            { lat: 43.2389, lng: 76.8894, name: 'Филиал в Алматы', address: 'ул. Примерная, д. 456, Алматы, Казахстан' },
+            { lat: 43.2220, lng: 76.8512, name: 'Филиал в Алматы', address: 'ул. Примерная, д. 789, Алматы, Казахстан' }
+            
+        ];
+
+        branches.forEach(function (branch) {
+            var marker = new google.maps.Marker({
+                position: { lat: branch.lat, lng: branch.lng },
+                map: map,
+                title: branch.name
+            });
+
+            var infowindow = new google.maps.InfoWindow({
+                content: '<h3>' + branch.name + '</h3><p>' + branch.address + '</p>'
+            });
+
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        });
+
+        
+        var backButton = document.getElementById('backButton');
+        if (backButton) {
+            backButton.addEventListener('click', function () {
+                history.back();
+            });
+        }
+    }
+</script>
+
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=ВАШ_API_КЛЮЧ&callback=initMap">
+</script>
+
+</body>
+</html>
